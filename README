@@ -1,0 +1,7 @@
+## python_mpd_toys:
+
+Basically, this is me playing with python_mpd.
+
+### Contents:
+
+* random_album: Randomly picks an album from your library, sets your playlist to said album's contents, and pushes play. Takes no options yet.
