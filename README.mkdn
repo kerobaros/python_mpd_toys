@@ -4,4 +4,13 @@ Basically, this is me playing with python_mpd.
 
 ### Contents:
 
-* random_album: Randomly picks an album from your library, sets your playlist to said album's contents, and pushes play. Takes no options yet.
+random_album: Randomly picks an album from your library, sets your playlist to said album's contents, and pushes play.
+`    Usage: random_album.py [options]
+    
+    Options:
+      -h, --help                 show this help message and exit
+      -a ARTIST, --artist=ARTIST Specifies an artist to limit album choices from; needs
+                                 to be a quoted string
+      -y YEAR, --year=YEAR       Specifies a year to limit album choices
+      -d, --debug                Outputs debug text and prevents modifying MPD server`
+                                                            
