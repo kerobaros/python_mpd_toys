@@ -1,6 +1,6 @@
 ## python_mpd_toys:
 
-Basically, this is me playing with python_mpd.
+Basically, this is me playing with [python-mpd](http://mpd.wikia.com/wiki/ClientLib:python-mpd). 
 
 ### Contents:
 
@@ -15,3 +15,14 @@ random_album: Randomly picks an album from your library, sets your playlist to s
       -y YEAR, --year=YEAR       Specifies a year to limit album choices
       -d, --debug                Outputs debug text and prevents modifying MPD server
                                                             
+similar_artists: Uses an artist you specify (or the artist of the current song), gets a list of similar artists from [last.fm](http://last.fm), and builds a playlist out of what it can find in your library. \(Requires [pyscrobble](http://code.google.com/p/pyscrobble)\.)
+    
+    Usage: similar_artists.py [options]
+    
+    Options:
+      -h, --help                 show this help message and exit
+      -a ARTIST, --artist=ARTIST Specifies an artist to start building playlist from;
+                                 needs to be a quoted string
+      -l LIMIT, --limit=LIMIT    Specifies length of playlist; defaults to 50
+      -d, --debug                Outputs debug text and prevents modifying MPD server
+        
