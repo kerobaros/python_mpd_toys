@@ -1,4 +1,5 @@
 #!/usr/bin/python
+# -*- coding: utf-8 -*-
 
 import random, mpd
 from optparse import OptionParser
@@ -14,10 +15,11 @@ def queue_album(artist = '', year = '', debug = False):
     elif year != '': list = sorted(MPD.list("album", "date", year))
     else: list = sorted(MPD.list("album"))
     if len(list) > 0:
-        if debug: print list
+        #if debug: print list
         album = random.choice(list)
         if debug: print album
-        tracks = sorted(MPD.find("album", album))
+        tracks = sorted(MPD.list("filename", "album", album))
+        if debug: print tracks
         if debug == None:
             for track in tracks: MPD.add(track['file'])
             MPD.play()
