@@ -21,7 +21,7 @@ def queue_album(artist = '', year = '', debug = False):
         tracks = sorted(MPD.list("filename", "album", album))
         if debug: print tracks
         if debug == None:
-            for track in tracks: MPD.add(track['file'])
+            for track in tracks: MPD.add(track)
             MPD.play()
             print 'Now Playing:', MPD.currentsong()['artist'], '-', MPD.currentsong()['album'], '(%s)' % MPD.currentsong()['date']
         MPD.close()
