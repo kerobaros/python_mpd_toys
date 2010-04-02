@@ -8,9 +8,6 @@ def queue_album(artist = '', year = '', debug = False):
 
     MPD = mpd.MPDClient()
     MPD.connect("localhost",6600)
-    if debug == None: 
-        MPD.stop()
-        MPD.clear()
     if artist != '': list = sorted(MPD.list("album", "artist", artist))
     elif year != '': list = sorted(MPD.list("album", "date", year))
     else: list = sorted(MPD.list("album"))
@@ -34,13 +31,25 @@ def main():
     parser.add_option("-a", "--artist", type = "string", dest = "artist", help = "Specifies an artist to limit album choices from; needs to be a quoted string")
     parser.add_option("-y", "--year", type = "string", dest = "year", help = "Specifies a year to limit album choices")
     parser.add_option("-d", "--debug", action = "store_true", dest = "debug", help = "Outputs debug text and prevents modifying MPD server")
+    parser.add_option("-i", "--iterations", type = "int", dest = "iterations", help = "Specifies how many albums to queue")
     (options, args) = parser.parse_args()
 
-    #if options.debug == None
+    i = 0
+
+    if options.debug == None: 
+        MPD.stop()
+        MPD.clear()
     
-    if options.artist: queue_album(artist = options.artist, debug = options.debug)
-    elif options.year: queue_album(year = options.year, debug = options.debug)
-    else: queue_album(debug = options.debug)
+    if options.iterations == None:
+        if options.artist: queue_album(artist = options.artist, debug = options.debug)
+        elif options.year: queue_album(year = options.year, debug = options.debug)
+        else: queue_album(debug = options.debug)
+    else:
+        while i < options.iterations:
+            if options.artist: queue_album(artist = options.artist, debug = options.debug)
+            elif options.year: queue_album(year = options.year, debug = options.debug)
+            else: queue_album(debug = options.debug)
+            i += 1
         
 if __name__ == '__main__':
     main()
