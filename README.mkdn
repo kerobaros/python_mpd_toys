@@ -37,8 +37,8 @@ When called with a dash ('-') as sole argument, script returns a series of aster
 When called with any other argument, or a lack thereof, script returns set rating of current song, or '0' if none exists.
 
 Example ratings.db:
-The Beatles/Revolver (Stereo Remaster)/14 Tomorrow Never Knows.flac:4
-Five Iron Frenzy/The End is Here/1-14 American Kryptonite.flac:4
-The Beatles/Rubber Soul (Mono Remaster)/03 You Won't See Me.flac:3
-Manfred Mann's Earth Band/The Best Of Manfred Mann's Earth Band/03 Quit Your Low Down Ways.flac:2
-Tom Waits/Real Gone/04 Shake It.flac:2
+    The Beatles/Revolver (Stereo Remaster)/14 Tomorrow Never Knows.flac:4
+    Five Iron Frenzy/The End is Here/1-14 American Kryptonite.flac:4
+    The Beatles/Rubber Soul (Mono Remaster)/03 You Won't See Me.flac:3
+    Manfred Mann's Earth Band/The Best Of Manfred Mann's Earth Band/03 Quit Your Low Down Ways.flac:2
+    Tom Waits/Real Gone/04 Shake It.flac:2
