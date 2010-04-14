@@ -33,7 +33,7 @@ Created to use with [conky](http://conky.sourceforge.net), in a manner similar t
     
 mpdrating.py: Keeps track of per-track ratings for MPD in a file at ~/.mpd/ratings.db, which consists of key:value pairs of the track's location (relative to MPD's music root) and an integer rating, 1-5.
 When called with an integer 1-5 as the sole argument, script sets rating for currently playing track in ratings.db as the given integer.
-When called with a dash ('-') as sole argument, script returns a series of asterisks ('*') according to rating of currently playing track. (ie. rating of 2 returns '**', rating of 4 returns '****')
+When called with a dash ('-') as sole argument, script returns a series of asterisks ('*') according to rating of currently playing track. (ie. rating of 2 returns "**", rating of 4 returns "****")
 When called with any other argument, or a lack thereof, script returns set rating of current song, or '0' if none exists.
 
 Example ratings.db:
