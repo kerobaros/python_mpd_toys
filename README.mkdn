@@ -32,7 +32,7 @@ Created to use with [conky](http://conky.sourceforge.net), in a manner similar t
     ${image /tmp/mpd.jpg -n -s 250x250 -p 12,420}   # place /tmp/mpd.jpg, resized to 250x250, at pixel 12,420 relative to top left corner of conky's display
     
 mpdrating.py: Keeps track of per-track ratings for MPD in a file at ~/.mpd/ratings.db, which consists of key:value pairs of the track's location (relative to MPD's music root) and an integer rating, 1-5.
-When called with an integer 1-5 as the sole argument, script sets rating for currently playing track in ratings.db as the given integer.
+When called with an integer 1-5 as the sole argument, script sets rating for currently playing track in ratings.db as the given integer. (If giving a song a rating of 1, script tells MPD to skip to the next song in the playlist as well.)
 When called with a dash ('-') as sole argument, script returns a series of asterisks ('*') according to rating of currently playing track. (ie. rating of 2 returns "**", rating of 4 returns "****")
 When called with any other argument, or a lack thereof, script returns set rating of current song, or '0' if none exists.
 
