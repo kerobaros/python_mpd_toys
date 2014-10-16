@@ -1,6 +1,6 @@
 ## python_mpd_toys:
 
-Basically, this is me playing with [python-mpd](http://mpd.wikia.com/wiki/ClientLib:python-mpd). 
+Basically, this is me playing with [python-mpd2](https://github.com/Mic92/python-mpd2).
 
 ### Contents:
 
